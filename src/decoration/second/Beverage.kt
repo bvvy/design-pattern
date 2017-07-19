@@ -5,9 +5,18 @@ package decoration.second
  */
 
 abstract class Beverage {
+    var description:String
+        get() {return description}
+        set(_description) { description = _description}
+    constructor(){}
+    constructor(description:String) {
+        this.description = description
+    }
+    private var hasMilk: Boolean = false
+    private var hasSoy  = false
+    private var hasMocha = false
+    private var hasWhip = false
 
-
-    var description = ""
     open fun cost(): Double {
         return 1.1
     }
