@@ -15,4 +15,8 @@ public class Coffee extends CoffaineBeverage {
         System.out.println("Dripping coffee through filter");
     }
 
+    @Override
+    boolean customerWantsCondiments() {
+        return false;
+    }
 }

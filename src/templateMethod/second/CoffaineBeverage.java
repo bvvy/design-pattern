@@ -9,7 +9,7 @@ public abstract class CoffaineBeverage {
         boilWater();
         brew();
         pourCup();
-        addCondiment();
+        if(customerWantsCondiments())addCondiment();
     }
 
     public void boilWater() {
@@ -24,4 +24,7 @@ public abstract class CoffaineBeverage {
 
     public abstract void addCondiment();
 
+    boolean customerWantsCondiments() {
+        return true;
+    }
 }

@@ -15,4 +15,9 @@ public class Tea extends CoffaineBeverage {
     public void addCondiment() {
         System.out.println("add lemon");
     }
+
+    @Override
+    boolean customerWantsCondiments() {
+        return true;
+    }
 }
