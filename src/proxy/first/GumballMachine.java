@@ -1,6 +1,4 @@
-package state.second;
-
-import java.util.Random;
+package proxy.first;
 
 /**
  * Created by bvvy on 2017/7/23.
@@ -12,11 +10,13 @@ public class GumballMachine {
     State soldOutState;
     State soldState;
     State winnerState;
+    String location;
 
     State state = soldOutState;
     int count = 0;
 
-    public GumballMachine(int count) {
+    public GumballMachine(int count,String location) {
+        this.location = location;
         hasQuarterState = new HasQuarterState(this);
         noQuarterState = new NoQuarterState(this);
         soldOutState = new SoldOutState(this);
@@ -50,7 +50,9 @@ public class GumballMachine {
         if(count!=0) count--;
     }
 
-
+    public String getLocation() {
+        return location;
+    }
 
     public State getHasQuarterState() {
         return hasQuarterState;
